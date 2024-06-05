@@ -1,0 +1,14 @@
+.falling-object {
+    position: absolute;
+    top: -50px;
+    background-color: red;
+    border-radius: 50%;
+    animation: fall linear infinite;
+    background-image: url("../src_images/Meteor.png");
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh); /* Падение на высоту экрана */
+    }
+}
