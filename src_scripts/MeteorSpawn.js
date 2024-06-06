@@ -27,7 +27,7 @@ function createFallingObject() {
         const index = window.meteors.indexOf(object);
         if (index > -1) {
             window.meteors.splice(index, 1);
-        }a
+        }
         object.remove();
     }, duration * 1000);
 }

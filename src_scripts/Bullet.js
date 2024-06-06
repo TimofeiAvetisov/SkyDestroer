@@ -13,12 +13,14 @@ function createBullet() {
     console.log(x, y);
     object.classList.add('bullet');
 
-    object.style.width = '20px';
-    object.style.height = '50px';
+    object.style.width = '10px';
+    object.style.height = '25px';
 
-    object.style.left = x + shipWidth / 2 - 10 + 'px';
-    object.style.top = y - shipHeight / 2 + 30 + 'px';
+    object.style.left = x + shipWidth / 2 - 5 + 'px';
+    object.style.top = y - shipHeight / 2 + 60 + 'px';
     object.style.animationDuration = `1s`;
+
+    object.style.backgroundImage = "url(\"src_images/Bullet.png\")";
 
     document.body.append(object);
     window.bullets.push(object);

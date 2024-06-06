@@ -1,3 +1,5 @@
+let score = 0;
+
 function isColliding(rect1, rect2) {
     return !(rect1.right < rect2.left || 
              rect1.left > rect2.right || 
@@ -5,6 +7,13 @@ function isColliding(rect1, rect2) {
              rect1.top > rect2.bottom);
 }
 
+
+function updateCounter() {
+    const counterElement = document.getElementById('score');
+    counterElement.textContent = score;
+}
+
+updateCounter();
 
 function update() {
     // Проверяем коллизии между падающими и летающими объектами
@@ -26,8 +35,26 @@ function update() {
                 window.meteors.splice(i, 1);
                 window.bullets.splice(j, 1);
 
+                score++;
+                updateCounter();
+
                 break; // Прерываем внутренний цикл
             }
+        }
+    }
+
+    for (let i = window.meteors.length -1; i >= 0; i--) {
+        const meteor = window.meteors[i];
+        const ship = document.getElementById('ship');
+        const rect1 = meteor.getBoundingClientRect();
+        const rect2 = ship.getBoundingClientRect();
+        if (isColliding(rect1, rect2)) {
+            score = 0;
+            updateCounter();
+
+            meteor.remove();
+            window.meteors.splice(i, 1);
+
         }
     }
 

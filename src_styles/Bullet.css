@@ -2,7 +2,7 @@
     position: absolute;
     bottom: -50px;
     animation: fly linear infinite;
-    background-color: red;
+    background-size: cover;
 }
 
 @keyframes fly {
