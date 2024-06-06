@@ -14,6 +14,8 @@ function createFallingObject() {
 
     const duration = Math.random() * 5 + 3;
     object.style.animationDuration = `${duration}s`;
+    console.log('url(\"src_images/MeteorImage' + (Math.floor(Math.random() * 4)  + 1) + '.png\")');
+    object.style.backgroundImage = 'url(\"src_Images/MeteorImage' + (Math.floor(Math.random() * 4)  + 1) + '.png\")';
 
     document.body.appendChild(object);
 

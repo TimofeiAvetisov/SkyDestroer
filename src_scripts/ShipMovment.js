@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let isReturning = false; // Флаг для определения возврата
     let keys_pressed = new Set();
     let movingCondition = false;
-    console.log("url(\"src_images/shipStatic.png\"");
     const updatePosition = () => {
         if (keys_pressed.size) {
             clearTimeout(idleTimeout);

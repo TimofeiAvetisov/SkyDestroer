@@ -1,0 +1,17 @@
+#ship{
+    height: 166px;
+    width: 140px;
+    background-image: url("../src_images/shipStatic.png");
+    background-size: cover;
+    background-position: top;
+    border-top-left-radius: 50% 80%;
+    border-top-right-radius: 50% 80%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-image: url("../src_images/Space.jpg");
+}
+

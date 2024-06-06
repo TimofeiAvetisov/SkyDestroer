@@ -4,7 +4,8 @@
     background-color: red;
     border-radius: 50%;
     animation: fall linear infinite;
-    background-image: url("../src_images/Meteor.png");
+    background-size: cover;
+    background-position: top;
 }
 
 @keyframes fall {
