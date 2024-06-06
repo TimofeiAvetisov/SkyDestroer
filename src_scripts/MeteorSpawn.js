@@ -1,3 +1,5 @@
+window.meteors = [];
+
 function createFallingObject() {
     const object = document.createElement('div');
     object.classList.add('falling-object');
@@ -18,9 +20,14 @@ function createFallingObject() {
     object.style.backgroundImage = 'url(\"src_Images/MeteorImage' + (Math.floor(Math.random() * 4)  + 1) + '.png\")';
 
     document.body.appendChild(object);
+    meteors.push(object);
 
     // Удаляем объект после завершения анимации
     setTimeout(() => {
+        const index = window.meteors.indexOf(object);
+        if (index > -1) {
+            window.meteors.splice(index, 1);
+        }a
         object.remove();
     }, duration * 1000);
 }

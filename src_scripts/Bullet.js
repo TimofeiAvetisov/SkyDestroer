@@ -1,5 +1,7 @@
-const fireRate = 200;
+const fireRate = 1000;
 const bulletSpeed = 100;
+window.bullets = [];
+
 
 function createBullet() {
     const object = document.createElement('div');
@@ -19,8 +21,13 @@ function createBullet() {
     object.style.animationDuration = `1s`;
 
     document.body.append(object);
+    window.bullets.push(object);
 
     setTimeout(() => {
+        const index = window.bullets.indexOf(object);
+        if (index > -1) {
+            window.bullets.splice(index, 1);
+        }
         object.remove();
     }, 1000);
 }

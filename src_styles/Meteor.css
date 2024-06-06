@@ -1,7 +1,6 @@
 .falling-object {
     position: absolute;
     top: -50px;
-    background-color: red;
     border-radius: 50%;
     animation: fall linear infinite;
     background-size: cover;
