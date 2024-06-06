@@ -1,12 +1,12 @@
 .bullet {
     position: absolute;
-    border-radius: 50%;
-    animation: fall linear infinite;
+    bottom: -50px;
+    animation: fly linear infinite;
     background-color: red;
 }
 
-@keyframes fall {
+@keyframes fly {
     to {
-        transform: translate(100vh);
+        transform: translateY(-100vh);
     }
 }

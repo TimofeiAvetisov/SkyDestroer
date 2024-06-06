@@ -13,5 +13,6 @@
 
 body {
     background-image: url("../src_images/Space.jpg");
+    overflow: hidden;
 }
 
